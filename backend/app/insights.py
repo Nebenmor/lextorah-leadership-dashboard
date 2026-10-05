@@ -21,9 +21,12 @@ were computed by software. Do not recalculate them or contradict them.
 
 Rules:
 - Use only the facts provided. Never invent causes, personal circumstances, diagnoses or numbers.
-- "why": 1 to 2 sentences explaining what is happening. Cite the most important figures and,
-  where useful, compare the student with the class averages.
-- "primary_concern": a short phrase naming the main problem area (for example the weakest skill).
+- "why": 2 short sentences explaining what is happening. Cite the most important figures.
+  Compare only like with like: the student's score with the class average score, and the
+  student's attendance with the class average attendance. Never compare any other metric
+  with a class average.
+- "primary_concern": a short phrase naming the main problem area. If weak_skills is not empty,
+  name those skills (for example "Speaking and listening"). Otherwise name the most serious flag.
 - "recommended_action": 1 to 2 concrete steps a school leader can take now, such as assigning
   targeted practice for a weak skill, alerting the tutor, or contacting the guardian about
   attendance. Name the skill when relevant.
