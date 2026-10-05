@@ -23,7 +23,7 @@ export default function App() {
         setStudents(list);
         if (list.length) setSelectedId(list[0].id); // auto-select the highest-risk student
       })
-      .catch(() => setLoadError("Could not reach the API. If it just woke up, retry in ~30 seconds."));
+      .catch(() => setLoadError("Could not reach the API. Please refresh the page in a moment."));
   }, []);
 
   const selected = students.find((s) => s.id === selectedId) ?? null;
@@ -48,7 +48,9 @@ export default function App() {
   }
 
   if (loadError) return <p className="p-8 text-red-700">{loadError}</p>;
-  if (!summary) return <p className="p-8 text-slate-500">Loading dashboard…</p>;
+  if (!summary) return <p className="p-8 text-slate-500">
+      Loading dashboard… the server may be waking up (free hosting), this can take up to a minute.
+    </p>;
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-900">
