@@ -1,9 +1,4 @@
 # render.yaml (repo root)
-databases:
-  - name: leadership-db
-    databaseName: leadership
-    plan: free
-
 services:
   - type: web
     name: leadership-api
@@ -17,9 +12,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.12.8
       - key: DATABASE_URL
-        fromDatabase:
-          name: leadership-db
-          property: connectionString
+        sync: false
       - key: GROQ_API_KEY
         sync: false
       - key: GROQ_MODEL
